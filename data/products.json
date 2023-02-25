@@ -1,0 +1,16 @@
+[
+  {
+    "id": 0,
+    "product": "Bonito del Norte",
+    "price": 8.0,
+    "category": "cat: I"
+  },
+  { "id": 1, "product": "Anchoas", "price": 10.0, "category": "cat: I" },
+  { "id": 2, "product": "Sardinas", "price": 5.0, "category": "cat: II" },
+  {
+    "id": 3,
+    "product": "Caballa del Sur",
+    "price": 7.0,
+    "category": "cat: II"
+  }
+]
