@@ -1,22 +1,22 @@
 {
-  "name": "week6.server",
+  "name": "202302-w6ch5-elena",
   "version": "1.0.0",
-  "description": "Node Server",
+  "description": "node server",
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "cross-env PORT=4500 node ./dist/index.js -w",
+    "start": "node ./dist/index.js",
     "start:mon": "cross-env PORT=4500 nodemon ./dist/index.js",
     "build": "tsc -w",
     "build:prod": "tsc",
-    "test": "react-scripts test --coverage",
-    "test:prod": "react-scripts test --coverage --watchAll=false"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "test:prod": ""
   },
   "keywords": [
-    "Node",
-    "Server"
+    "node",
+    "server"
   ],
-  "author": "Alejandro Cerezo",
+  "author": "Elena",
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^18.14.0",
