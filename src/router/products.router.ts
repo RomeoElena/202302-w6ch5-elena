@@ -1,10 +1,10 @@
 import { Router } from 'express';
 import { ProductsController } from '../controllers/products.controller.js';
-import { ProductsRepo } from '../repository/products.repo.js';
+import { ProductsFileRepo } from '../repository/products.file.repo.js';
 
 // eslint-disable-next-line new-cap
 export const productsRouter = Router();
-const repo = new ProductsRepo();
+const repo = new ProductsFileRepo();
 const controller = new ProductsController(repo);
 
 productsRouter.get('/', controller.getAll.bind(controller));
