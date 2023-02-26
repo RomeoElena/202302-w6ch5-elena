@@ -10,7 +10,7 @@ server.on('error', () => {
 });
 
 server.on('listening', () => {
-  console.log('listening in http://localhost: ' + PORT);
+  console.log('listening in http://localhost:' + PORT);
 });
 
 server.listen(PORT);
