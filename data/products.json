@@ -1,16 +1,17 @@
 [
   {
-    "id": 0,
+    "id": 1,
     "product": "Bonito del Norte",
-    "price": 8.0,
+    "price": "8.00€",
     "category": "cat: I"
   },
-  { "id": 1, "product": "Anchoas", "price": 10.0, "category": "cat: I" },
-  { "id": 2, "product": "Sardinas", "price": 5.0, "category": "cat: II" },
+  { "id": 2, "product": "Anchoas", "price": "10.00€", "category": "cat: I" },
+  { "id": 3, "product": "Sardinas", "price": "5.00€", "category": "cat: II" },
   {
-    "id": 3,
+    "id": 4,
     "product": "Caballa del Sur",
-    "price": 7.0,
+    "price": "7.00€",
     "category": "cat: II"
-  }
+  },
+  { "id": 5, "product": "Atún", "price": "4.00€", "category": "cat: II" }
 ]
