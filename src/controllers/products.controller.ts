@@ -1,21 +1,38 @@
 import { Request, Response } from 'express';
-import { ProductsRepo } from '../repository/products.repo.js';
+import { ProductsFileRepo } from '../repository/products.file.repo.js';
 
 export class ProductsController {
-  // eslint-disable-next-line no-unused-vars, no-useless-constructor
-  constructor(public repo: ProductsRepo) {}
+  constructor(public repo: ProductsFileRepo) {
+    this.repo = repo;
+  }
 
   getAll(_req: Request, resp: Response) {
-    this.repo.read().then((data) => resp.json(data));
+    this.repo.read().then((data) => {
+      resp.json(data);
+    });
   }
 
   get(req: Request, resp: Response) {
-    resp.send(req.params.id);
+    const id = Number(req.params.id);
+
+    this.repo.readById(id).then((data) => {
+      resp.json(data);
+    });
   }
 
-  post(_req: Request, _resp: Response) {}
+  post(req: Request, resp: Response) {
+    this.repo.write(req.body).then((data) => {
+      resp.json(data);
+    });
+  }
 
-  patch(_req: Request, _resp: Response) {}
+  patch(req: Request, resp: Response) {
+    const id = Number(req.params.id);
+    this.repo.update(id, req.body).then((data) => resp.json(data));
+  }
 
-  delete(_req: Request, _resp: Response) {}
+  delete(req: Request, resp: Response) {
+    const id = Number(req.params.id);
+    this.repo.delete(id).then((data) => resp.json(data));
+  }
 }
